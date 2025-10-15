@@ -1,0 +1,10 @@
+{
+    "name": "demo/products-srp-demo",
+    "description": "Demo project: Product register/list with SRP and PSR-4",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
