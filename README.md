@@ -1,8 +1,45 @@
 Thiago Okada Aoki
 RA 2002282
+#  Projeto — Cadastro e Listagem de Produtos (SRP + PSR-4 + PHP)
 
-Projeto em PHP puro aplicando SRP e PSR-4 (Composer autoload).
-Estrutura mínima para cadastro e listagem de produtos usando arquivo (JSON).
+Este projeto demonstra um sistema simples de **cadastro e listagem de produtos** feito em **PHP puro**, aplicando **SRP (Single Responsibility Principle)** e **PSR-4 (Composer autoload)**.  
+Não há banco de dados — os produtos são armazenados em um arquivo texto (`storage/products.txt`), um **JSON por linha**.
+
+---
+
+## Objetivo
+Aprender e aplicar os princípios:
+- **SRP** — separar responsabilidades (validação, aplicação e persistência)
+- **PSR-4** — organização e autoload de classes
+- **Camadas organizadas**: `Application`, `Domain`, `Infra`, `Contracts`
+- Persistência em **arquivo texto JSON por linha**
+
+---
+
+## 🗂️ Estrutura do Projeto
+
+```bash
+products-srp-demo/
+├─ composer.json
+├─ vendor/
+├─ src/
+│ ├─ Contracts/
+│ │ ├─ ProductRepository.php
+│ │ └─ ProductValidator.php
+│ ├─ Application/
+│ │ └─ ProductService.php
+│ ├─ Domain/
+│ │ └─ SimpleProductValidator.php
+│ └─ Infra/
+│ └─ FileProductRepository.php
+├─ public/
+│ ├─ index.php
+│ ├─ create.php
+│ └─ products.php
+└─ storage/
+└─ products.txt
+```
+
 
 ## Como usar (Windows + XAMPP)
 1. Coloque a pasta `products-srp-demo` dentro do `htdocs` do XAMPP.
