@@ -37,8 +37,3 @@ Estrutura mínima para cadastro e listagem de produtos usando arquivo (JSON).
 
 5. **Múltiplos cadastros**
    - Criar 3 produtos e verificar IDs incrementais 1,2,3
-
-## Observações
-- Projeto usa persistência simples: `storage/products.txt` com JSON por linha.
-- PSR-12 e SRP foram considerados em organização: contratos, domínio (validador),
-  infra (repositório de arquivo) e application (serviço).
